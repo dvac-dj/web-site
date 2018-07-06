@@ -1,38 +1,78 @@
 <template>
-  <section class="contents">
-    <div class="box">
-      <article class="media">
-        <div class="media-left">
-          <figure class="image is-128x128">
-            <img src="~/assets/flyer001.jpg" alt="">
-          </figure>
-        </div>
-        <div class="media-content">
-          <div class="content">
-            <h2 class="title">NEXT</h2>
-            <time class="datetime" datetime="2017-10-07T14:00+09:00">
-              <span class="date">2017/10/07(sat)</span><span class="time">14:00open</span>
+  <section class="section has-text-centered">
+    <h2 class="title is-1">NEXT</h2>
+    <figure class="section image">
+      <img class="main-image" src="~/assets/flyer001.jpg" alt="">
+    </figure>
+    <div class="section is-size-5">
+      <time class="datetime" datetime="2017-10-07T14:00+09:00">
+        <span class="date">2017/10/07(sat)&nbsp;</span><span class="time">14:00open</span>
+      </time>
+      <p>@<a href="http://sinjuku-azito.com/" target="_blank">Shinjuku azito</a>&nbsp;(<router-link to="/access">ACCESS</router-link>)</p>
+      <p>Entrance ￥2,000&nbsp;w1d<br>(レコード割で￥500off)</p>
+    </div>
+    <button class="button is-medium is-dark is-rounded" @click="buttonClick"><i class="fa fa-caret-right"></i>&nbsp;&nbsp;詳細を見る</button>
+    <div class="modal" :class="{ 'is-active': showModal }">
+      <div class="modal-background" @click="buttonClick"></div>
+      <div class="modal-card has-text-left">
+        <header class="modal-card-head">
+          <p class="modal-card-title">
+            <time datetime="2017-10-07T14:00+09:00">
+              <span class="date">2017/10/07(sat)&nbsp;</span><span class="time">14:00open</span>
             </time>
-            <p>@<a href="http://sinjuku-azito.com/">Shinjuku azito</a></p>
-            <p>Entrance ￥2,000w1d (レコード割で￥500off)</p>
+          </p>
+          <button class="delete is-large" aria-label="close" @click="buttonClick"></button>
+        </header>
+        <div class="modal-card-body">
+          <div class="section is-size-5">
+            <p>@<a href="http://sinjuku-azito.com/" target="_blank">Shinjuku azito</a>&nbsp;(<router-link to="/access">ACCESS</router-link>)</p>
+            <p>Entrance ￥2,000&nbsp;w1d&nbsp;(レコード割で￥500off)</p>
+          </div>
+          <figure class="section image">
+            <img src="~/assets/tt001.jpg" alt="">
+          </figure>
+          <div class="section">
+            <p class="title is-5">レコード割とは</p>
+            <p>レコードを持参の方は¥500off<br>お持ちいただいたレコードをそのままリクエスト音源としても受付ますので、希望の方は入場後にリクエストボックスにレコードを入れて下さい。</p>
+          </div>
+          <div class="section">
+            <p class="title is-5">ターンテーブルふれあい企画</p>
+            <p>
+              ターンテーブルでのDJを体験できる企画を行います。<br>
+              DJ機材に触ったことのない方、DJは出来るけどターンテーブル触ったことのない方、バリバリ使いこなせるけどアピールしたい方、どなたでも参加いただけます。<br>
+              １人あたり10分間で3名分の時間を設けております。<br>
+              ●希望者多数の場合には抽選で3名を選出します。<br>
+              ●機材はメンバーのものをお貸しするので用意いただくものはありません。
+            </p>
           </div>
         </div>
-      </article>
+      </div>
     </div>
   </section>
 </template>
 
-<style scoped>
-.contents {
-  color: #000;
-  height: 100%;
-  padding: 102px 0 0 50px;
-  box-sizing: border-box;
+<script>
+export default {
+  data() {
+    return {
+      showModal: false
+    }
+  },
+  methods: {
+    buttonClick() {
+      this.showModal = !this.showModal
+    }
+  }
 }
-.box {
-  width: 500px;
+</script>
+
+<style scoped>
+.main-image {
+  max-width: 450px;
+  margin: 0 auto;
 }
 .datetime {
   display: flex;
+  justify-content: center;
 }
 </style>

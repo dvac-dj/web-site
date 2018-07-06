@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <h1 class="logo"><router-link to="/"><dvac-logo /></router-link></h1>
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{ 'is-active': showMenu }" @click="burgerClick">
+      <a role="button" class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false" :class="{ 'is-active': showMenu }" @click="burgerClick">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -39,33 +39,12 @@ export default {
 <style lang="scss" scoped>
 .navbar {
   position: absolute;
+  font-family: 'Oswald', sans-serif;
   width: 100%;
 }
 .logo {
-  position: absolute;
-  left: 5px;
-  top: 5px;
   width: 160px;
-  z-index: 1;
-}
-.navbar-burger {
-  color: #fff;
-  font-size: 2em;
-}
-.navbar-burger:hover {
-  color: #fff;
-}
-.navbar-start {
-  padding-left: 200px;
-}
-@include touch {
-  .navbar-start {
-    text-align: right;
-    padding-left: 0;
-  }
-}
-.navbar-item {
-  font-family: 'Oswald', sans-serif;
+  margin: 5px 30px 0 5px;
 }
 .nuxt-link-exact-active {
   color: #d20841;

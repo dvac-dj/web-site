@@ -37,6 +37,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon-180x180.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Oswald:500' }
     ]
   },
@@ -57,7 +58,7 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/font-awesome',
     ['nuxt-sass-resources-loader', [
-      '~/assets/mixin.scss'
+      '~/assets/utilities.scss'
     ]]
   ],
   /*

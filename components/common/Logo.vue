@@ -175,3 +175,9 @@
           d="M134.175,134.173H2.828V2.83h131.348V134.173z M137.003,0H0v137h137.003V0z" />
   </svg>
 </template>
+
+<style>
+svg {
+  display: block;
+}
+</style>
