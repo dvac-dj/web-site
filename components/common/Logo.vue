@@ -176,7 +176,7 @@
   </svg>
 </template>
 
-<style>
+<style scoped>
 svg {
   display: block;
 }

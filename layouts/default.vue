@@ -1,7 +1,9 @@
 <template>
   <div class="wrapper">
     <dvac-nav-bar />
-    <nuxt class="container" />
+      <div class="container">
+        <nuxt />
+      </div>
     <dvac-footer />
   </div>
 </template>
@@ -23,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  background: #eee url('~/assets/illust.png') no-repeat right -220px top 100px;
+  background: #eee url('~/assets/illust.png') no-repeat right -300px top 100px;
   background-size: 573px;
 }
 @media
@@ -33,9 +35,32 @@ export default {
     background-image: url('~/assets/illust@2x.png');
   }
 }
-@include touch {
+@include mobile {
   .wrapper {
-    background-image: none;
+    background-position: right -300px top 100px;
+  }
+  .container {
+    background-color: rgba(238, 238, 238, .7);
+  }
+}
+@include tablet {
+  .wrapper {
+    background-position: right -300px top 100px;
+  }
+}
+@include desktop {
+  .wrapper {
+    background-position: right -220px top 100px;
+  }
+}
+@include widescreen {
+  .wrapper {
+    background-position: right -160px top 100px;
+  }
+}
+@include fullhd {
+  .wrapper {
+    background-position: right -100px top 100px;
   }
 }
 .container {

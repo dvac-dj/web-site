@@ -66,5 +66,6 @@ module.exports = {
   */
   css: [
     { src: '~/assets/main.scss', lang: 'scss' }
-  ]
+  ],
+  mode: 'spa'
 }
