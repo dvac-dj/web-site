@@ -16,8 +16,8 @@
       <div class="modal-background" @click="buttonClick"></div>
       <div class="modal-card has-text-left">
         <header class="modal-card-head has-background-grey-darker">
-          <p class="modal-card-title has-text-white">
-            <time class="is-size-4-tablet is-size-6-mobile" datetime="2017-10-07T14:00+09:00">
+          <p class="modal-card-title has-text-white is-size-4-tablet is-size-6-mobile">
+            <time datetime="2017-10-07T14:00+09:00">
               <span class="date">2017/10/07(sat)&nbsp;</span><span class="time">14:00open</span>
             </time>
           </p>
@@ -70,6 +70,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.modal-card {
+  max-height: 80vh;
+}
 .main-image {
   max-width: 450px;
   margin: 0 auto;
