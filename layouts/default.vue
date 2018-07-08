@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <dvac-nav-bar />
-      <div class="container">
+      <div class="main">
         <nuxt />
       </div>
     <dvac-footer />
@@ -25,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  background: #eee url('~/assets/illust.png') no-repeat right -300px top 100px;
+  background: $background-color url('~/assets/illust.png') no-repeat right -300px top 100px;
   background-size: 573px;
 }
 @media
@@ -39,8 +39,8 @@ export default {
   .wrapper {
     background-position: right -300px top 100px;
   }
-  .container {
-    background-color: rgba(238, 238, 238, .7);
+  .main {
+    background-color: $background-color-overlay;
   }
 }
 @include tablet {
@@ -63,7 +63,7 @@ export default {
     background-position: right -100px top 100px;
   }
 }
-.container {
+.main {
   min-height: calc(100vh - 100px);
   padding: 5rem 0;
 }

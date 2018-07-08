@@ -1,14 +1,19 @@
-$navbar-background-color: #000;
-$navbar-item-color: #fff;
-$navbar-item-hover-color: #000;
-$navbar-item-hover-background-color: #d20841;
-$navbar-burger-color: #fff;
-
-$footer-background-color: #000;
+$link: $key-color;
+$link-hover: darken($key-color, 10%);
+$title-color: $grey-darker;
+$body-color: $grey-darker;
 
 $section-padding: 0 1.5rem 3rem;
 
-$modal-card-head-background-color: #eee;
+$navbar-background-color: $black;
+$navbar-item-color: $white;
+$navbar-item-hover-color: $black;
+$navbar-item-hover-background-color: $key-color;
+$navbar-burger-color: $white;
+
+$footer-background-color: $black;
+
+$modal-background-background-color: rgba(0, 0, 0, .7);
 
 @import "~bulma/sass/base/_all";
 @import "~bulma/sass/elements/_all";

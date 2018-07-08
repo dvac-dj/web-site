@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar">
+  <nav class="navbar has-background-black">
     <div class="navbar-brand">
       <h1 class="logo" @click="linkClick"><router-link to="/"><dvac-logo /></router-link></h1>
       <a role="button" class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false" :class="{ 'is-active': showMenu }" @click="burgerClick">
@@ -33,14 +33,13 @@ export default {
       this.showMenu = !this.showMenu
     },
     linkClick() {
-      console.log('click');
       this.showMenu = false
     }
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .navbar {
   position: absolute;
   font-family: 'Oswald', sans-serif;
@@ -51,7 +50,7 @@ export default {
   margin: 5px 30px 0 5px;
 }
 .nuxt-link-exact-active {
-  color: #d20841;
+  color: $key-color;
   pointer-events: none;
 }
 </style>

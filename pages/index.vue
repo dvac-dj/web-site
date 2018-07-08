@@ -11,12 +11,12 @@
       <p>@<a href="http://sinjuku-azito.com/" target="_blank">Shinjuku azito</a>&nbsp;(<router-link to="/access">ACCESS</router-link>)</p>
       <p>Entrance ￥2,000&nbsp;w1d<br>(レコード割で￥500off)</p>
     </div>
-    <button class="button is-medium is-dark is-rounded" @click="buttonClick"><i class="fa fa-caret-right"></i>&nbsp;&nbsp;詳細を見る</button>
+    <button class="button is-medium is-rounded has-text-white" @click="buttonClick"><i class="fa fa-caret-right"></i>&nbsp;&nbsp;詳細を見る</button>
     <div class="modal" :class="{ 'is-active': showModal }">
       <div class="modal-background" @click="buttonClick"></div>
       <div class="modal-card has-text-left">
-        <header class="modal-card-head">
-          <p class="modal-card-title">
+        <header class="modal-card-head has-background-grey-darker">
+          <p class="modal-card-title has-text-white">
             <time class="is-size-4-tablet is-size-6-mobile" datetime="2017-10-07T14:00+09:00">
               <span class="date">2017/10/07(sat)&nbsp;</span><span class="time">14:00open</span>
             </time>
@@ -77,6 +77,13 @@ export default {
 .datetime {
   display: flex;
   justify-content: center;
+}
+.button {
+  background-color: $key-color;
+  border: none;
+}
+.button:hover {
+  background-color: darken($key-color, 10%);
 }
 @include mobile {
   .modal-card-body .section {
