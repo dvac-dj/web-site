@@ -1,5 +1,5 @@
 <template>
-  <section class="section has-text-centered">
+  <section class="container section has-text-centered">
     <h2 class="title is-size-1">NEXT</h2>
     <figure class="section image">
       <img class="main-image" src="~/assets/flyer001.jpg" alt="">

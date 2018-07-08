@@ -1,5 +1,5 @@
 <template>
-  <section class="section has-text-centered">
+  <section class="container section has-text-centered">
     <h2 class="title is-size-1">CREW</h2>
     <section class="section">
       <h3 class="title is-size-3">- DJ -</h3>
