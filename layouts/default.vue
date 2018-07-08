@@ -18,6 +18,9 @@ export default {
 </script>
 
 <style>
+body {
+  overflow: hidden;
+}
 .title {
   font-family: 'Oswald', sans-serif;
 }
