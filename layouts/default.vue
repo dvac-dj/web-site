@@ -67,7 +67,7 @@ body {
   }
 }
 .main {
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 150px);
   padding: 5rem 0;
 }
 </style>

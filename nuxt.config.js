@@ -1,6 +1,6 @@
 module.exports = {
   /*
-  ** Build configuration
+  ** generate configuration
   */
   generate: {
     minify: {
@@ -8,6 +8,9 @@ module.exports = {
     },
     fallback: true
   },
+  /*
+  ** Build configuration
+  */
   build: {
     postcss: {
       plugins: {
@@ -15,7 +18,8 @@ module.exports = {
           warnings: false
         }
       }
-    }
+    },
+    vendor: ['~/plugins/contentful']
   },
   /*
   ** Headers
@@ -61,6 +65,7 @@ module.exports = {
   ** Modules
   */
   modules: [
+    '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
     '@nuxtjs/font-awesome',
     ['nuxt-sass-resources-loader', [
@@ -68,10 +73,17 @@ module.exports = {
     ]]
   ],
   /*
+  ** Plugins
+  */
+  plugins: ['~/plugins/contentful'],
+  /*
   ** Include css not in components
   */
   css: [
     { src: '~/assets/main.scss', lang: 'scss' }
   ],
+  /*
+  ** Mode
+  */
   mode: 'spa'
 }
