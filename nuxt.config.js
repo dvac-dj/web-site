@@ -2,6 +2,12 @@ module.exports = {
   /*
   ** Build configuration
   */
+  generate: {
+    minify: {
+      removeScriptTypeAttributes: true
+    },
+    fallback: true
+  },
   build: {
     postcss: {
       plugins: {
