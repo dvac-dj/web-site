@@ -8,7 +8,7 @@ const config = {
 if (isDevelopment) { config.host = 'preview.contentful.com' }
 
 export default {
-  createClient () {
+  createClient() {
     return contentful.createClient(config)
   }
 }

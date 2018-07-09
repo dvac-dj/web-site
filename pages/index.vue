@@ -2,7 +2,7 @@
   <section class="container section has-text-centered">
     <h2 class="title is-size-1">NEXT</h2>
     <figure class="section image">
-      <img class="main-image" :src="mainImage" alt="">
+      <img class="main-image" :src="`${mainImage}${getImageOption('main', 1)}`" :srcset="`${mainImage}${getImageOption('main', 1)} 1x, ${mainImage}${getImageOption('main', 2)} 2x`" alt="">
     </figure>
     <div class="section is-size-5-tablet">
       <time class="datetime" :datetime="datetime">
@@ -28,8 +28,8 @@
             <p>@<a :href="locationUrl" target="_blank">{{ locationName }}</a>&nbsp;(<router-link to="/access">ACCESS</router-link>)</p>
             <p v-html="entrance"></p>
           </div>
-          <figure class="section image">
-            <img :src="modalImage" alt="">
+          <figure v-if="modalImage" class="section image">
+            <img :src="`${modalImage}${getImageOption('modal', 1)}`" :srcset="`${modalImage}${getImageOption('modal', 1)} 1x, ${modalImage}${getImageOption('modal', 2)} 2x`" alt="">
           </figure>
           <div class="section">
             <p v-if="modalTitle1" class="title is-size-5-tablet is-size-6-mobile">{{ modalTitle1 }}</p>
@@ -67,7 +67,6 @@ export default {
   },
   async asyncData(context) {
     const informations = await client.getEntries({ content_type: 'information' })
-    console.log(informations)
     return informations.items.map(entry => {
       return {
         datetime: new Date(entry.fields.datetime),
@@ -78,8 +77,8 @@ export default {
         modalTitle2: entry.fields.modalTitle2,
         modalText1: entry.fields.modalText1,
         modalText2: entry.fields.modalText2,
-        mainImage: `${entry.fields.mainImage.fields.file.url}?w=900&fit=thumb`,
-        modalImage: `${entry.fields.modalImage.fields.file.url}?w=1200&fit=thumb`,
+        mainImage: entry.fields.mainImage.fields.file.url,
+        modalImage: (entry.fields.modalImage) ? entry.fields.modalImage.fields.file.url : null
       }
     })[0]
   },
@@ -103,6 +102,18 @@ export default {
         5: 'fri',
         6: 'sat'
       }[week]
+    },
+    getImageOption(key, scale) {
+      return {
+        main: {
+          1: '?w=450&fit=pad',
+          2: '?w=900&fit=pad'
+        },
+        modal: {
+          1: '?w=600&fit=pad',
+          2: '?w=1200&fit=pad'
+        }
+      }[key][scale]
     }
   }
 }
