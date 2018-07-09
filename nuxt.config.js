@@ -75,7 +75,10 @@ module.exports = {
   /*
   ** Plugins
   */
-  plugins: ['~/plugins/contentful'],
+  plugins: [
+    '~/plugins/contentful',
+    { src: '~/plugins/nuxt-client-init.js', ssr: false }
+  ],
   /*
   ** Include css not in components
   */

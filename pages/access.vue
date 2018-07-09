@@ -15,7 +15,7 @@ export default {
       name: '',
       lat: '',
       lon: ''
-    };
+    }
   },
   async asyncData(context) {
     const accesses = await client.getEntries({ content_type: 'access' })

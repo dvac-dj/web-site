@@ -6,12 +6,26 @@
         <small class="text">illustrations by <a href="https://twitter.com/shiroi_" target="_blank">白い</a></small>
       </div>
       <div class="column is-2">
-        <a href="https://twitter.com/intent/tweet?text=DVAC+-Digital+Vinyl+Anime+Crew-%0D%0Ahttps%3A%2F%2Fexample.com&hashtags=DVAC_tokyo" class="button is-medium is-rounded has-text-white is-size-4" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a :href="getTwitterUrl" class="button is-medium is-rounded has-text-white is-size-4" target="_blank"><i class="fa fa-twitter"></i></a>
         <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+  computed: {
+    getTwitterUrl() {
+      if (!this.$store.state.twitter) return 'https://twitter.com/intent/tweet'
+      const text = (this.$store.state.twitter.text) ? this.$store.state.twitter.text : ''
+      const url = (this.$store.state.twitter.url) ? this.$store.state.twitter.url : ''
+      const hashtag = (this.$store.state.twitter.hashtag) ? this.$store.state.twitter.hashtag : ''
+      return `https://twitter.com/intent/tweet?text=${encodeURI(`${text}${(text && url) ? ' ' : ''}${url}`)}&hashtags=${encodeURI(hashtag)}`
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .footer {

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import DvacDefault from './default';
+import DvacDefault from './default'
 
 export default {
   components: { DvacDefault }

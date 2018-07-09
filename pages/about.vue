@@ -21,7 +21,7 @@ export default {
     return {
       title: '',
       text: ''
-    };
+    }
   },
   async asyncData(context) {
     const abouts = await client.getEntries({ content_type: 'about' })

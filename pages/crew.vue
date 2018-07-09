@@ -98,7 +98,7 @@
 </template>
 
 <script>
-import DvacCrew from '~/components/crew/crew';
+import DvacCrew from '~/components/crew/crew'
 
 export default {
   layout: 'crew',
