@@ -1,7 +1,11 @@
-$gap: 0;
+// vue内で使用するものを定義
+// 独自変数
 $key-color: #d20841;
 $twitter-color: #1da1f2;
 $background-color: rgb(238, 238, 238);
 $background-color-overlay: rgba(238, 238, 238, .7);
+
+// bulma設定上書き
+$gap: 0;
 
 @import "~bulma/sass/utilities/_all";

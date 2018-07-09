@@ -1,18 +1,15 @@
+// bulma設定上書き
 $link: $key-color;
 $link-hover: darken($key-color, 10%);
 $title-color: $grey-darker;
 $body-color: $grey-darker;
-
 $section-padding: 0 1.5rem 3rem;
-
 $navbar-background-color: $black;
 $navbar-item-color: $white;
 $navbar-item-hover-color: $black;
 $navbar-item-hover-background-color: $key-color;
 $navbar-burger-color: $white;
-
 $footer-background-color: $black;
-
 $modal-background-background-color: rgba(0, 0, 0, .7);
 
 @import "~bulma/sass/base/_all";
