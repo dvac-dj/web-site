@@ -8,7 +8,7 @@
       <div class="modal-background" @click="buttonClick"></div>
       <div class="modal-card has-text-left">
         <header class="modal-card-head has-background-grey-darker">
-          <p class="modal-card-title has-text-white"><span class="name is-size-4">{{ name }}</span><span v-if="credit"  class="credit is-size-6-tablet is-size-7-mobile">({{ credit }})</span></p>
+          <p class="modal-card-title has-text-white"><span class="name is-size-4">{{ name }}</span><span v-if="credit" class="credit is-size-6-tablet is-size-7-mobile">({{ credit }})</span></p>
           <button class="delete is-large" aria-label="close" @click="buttonClick"></button>
         </header>
         <div class="modal-card-body">

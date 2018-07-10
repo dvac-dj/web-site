@@ -7,6 +7,7 @@
         <div class="section has-text-left-mobile">
           <p v-html="text"></p>
         </div>
+        <iframe class="video" width="100%" height="315" v-if="youtubeUrl" :src="youtubeUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </section>
     </div>
   </section>
@@ -20,7 +21,8 @@ export default {
   data() {
     return {
       title: '',
-      text: ''
+      text: '',
+      video: ''
     }
   },
   async asyncData(context) {
@@ -29,9 +31,30 @@ export default {
     return abouts.items.map(entry => {
       return {
         title: entry.fields.title,
-        text: entry.fields.text
+        text: entry.fields.text,
+        video: entry.fields.video
       }
     })[0]
+  },
+  computed: {
+    youtubeUrl() {
+      if(!this.video || !this.video.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\/)?(.+)/g)) return
+      let id = this.getYoutubeId(decodeURI(this.video))
+      if (!id) id = this.video.replace(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\/)?(.+)/g, '$1')
+      id = (id.split('?'))[0]
+      id = (id.split('#'))[0]
+      return `http://www.youtube.com/embed/${id}`
+    }
+  },
+  methods: {
+    getYoutubeId(url) {
+      const array = url.split('?')
+      if (!array[1]) return
+      const value = array[1].split('&').find((element) => {
+        return (element.split('=')[0] === 'v')
+      })
+      return (value) ? value.split('=')[1] : ''
+    }
   }
 }
 </script>
@@ -39,5 +62,8 @@ export default {
 <style scoped>
 .content {
   padding-top: 6rem;
+}
+.video {
+  max-width: 600px;
 }
 </style>
