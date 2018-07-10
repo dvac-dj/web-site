@@ -7,7 +7,7 @@
         <div class="section has-text-left-mobile">
           <p v-html="text"></p>
         </div>
-        <iframe class="video" width="100%" height="315" v-if="youtubeUrl" :src="youtubeUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe class="video" v-if="youtubeUrl" :src="youtubeUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </section>
     </div>
   </section>
@@ -59,11 +59,19 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .content {
   padding-top: 6rem;
 }
 .video {
+  width: 100%;
+  height: 338px;
   max-width: 600px;
+}
+@include mobile {
+  .video {
+    max-width: 100%;
+    height: calc((100vw - 3rem) * (9 / 16));
+  }
 }
 </style>
