@@ -19,6 +19,7 @@ export default {
   },
   async asyncData(context) {
     const accesses = await client.getEntries({ content_type: 'access' })
+    if (accesses.length) return
     return accesses.items.map(entry => {
       return {
         name: entry.fields.name,

@@ -2,8 +2,8 @@
   <footer class="footer is-paddingless has-text-white has-text-centered">
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <small class="text">&copy; 2018 DVAC -Digital Vinyl Anime Crew-</small>
-        <small class="text">illustrations by <a href="https://twitter.com/shiroi_" target="_blank">白い</a></small>
+        <small class="text" v-html="getCopyright"></small>
+        <small class="text" v-if="getIllustrations" v-html="getIllustrations"></small>
       </div>
       <div class="column is-2">
         <a :href="getTwitterUrl" class="button is-medium is-rounded has-text-white is-size-4" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -22,6 +22,12 @@ export default {
       const url = (this.$store.state.twitter.url) ? this.$store.state.twitter.url : ''
       const hashtag = (this.$store.state.twitter.hashtag) ? this.$store.state.twitter.hashtag : ''
       return `https://twitter.com/intent/tweet?text=${encodeURI(`${text}${(text && url) ? ' ' : ''}${url}`)}&hashtags=${encodeURI(hashtag)}`
+    },
+    getCopyright() {
+      return this.$store.state.copyright.copyright
+    },
+    getIllustrations() {
+      return this.$store.state.copyright.illustrations
     }
   }
 }

@@ -25,6 +25,7 @@ export default {
   },
   async asyncData(context) {
     const abouts = await client.getEntries({ content_type: 'about' })
+    if (abouts.length) return
     return abouts.items.map(entry => {
       return {
         title: entry.fields.title,
