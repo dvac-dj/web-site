@@ -47,7 +47,11 @@ export default {
 }
 .navbar-item {
   justify-content: center;
-  width: 80px;
+}
+@include mobile {
+  .navbar-item {
+    width: 100%;
+  }
 }
 .logo {
   width: 160px;

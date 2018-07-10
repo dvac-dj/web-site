@@ -45,7 +45,7 @@ export default {
       if (!id) id = this.video.replace(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\/)?(.+)/g, '$1')
       id = (id.split('?'))[0]
       id = (id.split('#'))[0]
-      return `http://www.youtube.com/embed/${id}`
+      return `https://www.youtube.com/embed/${id}`
     }
   },
   methods: {

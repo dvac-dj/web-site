@@ -2,7 +2,7 @@
   <div>
     <section class="container section has-text-centered">
       <h2 class="title is-size-1">ACCESS</h2>
-      <iframe class="map has-background-grey-light" :src="`http://maps.google.co.jp/maps?ll=${lat},${lon}&q=${name}&output=embed&t=m&z=16`" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe class="map has-background-grey-light" :src="`https://maps.google.co.jp/maps?ll=${lat},${lon}&q=${name}&output=embed&t=m&z=16`" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
     </section>
   </div>
 </template>
