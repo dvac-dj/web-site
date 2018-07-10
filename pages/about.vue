@@ -1,16 +1,18 @@
 <template>
-  <section class="container section has-text-centered">
-    <h2 class="title is-size-1">ABOUT</h2>
-    <div class="content is-size-5-tablet is-size-6-mobile">
-      <section>
-        <h3 class="title is-size-3">{{ title }}</h3>
-        <div class="section has-text-left-mobile">
-          <p v-html="text"></p>
-        </div>
-        <iframe class="video" v-if="youtubeUrl" :src="youtubeUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </section>
-    </div>
-  </section>
+  <div>
+    <section class="container section has-text-centered">
+      <h2 class="title is-size-1">ABOUT</h2>
+      <div class="content is-size-5-tablet is-size-6-mobile">
+        <section>
+          <h3 class="title is-size-3">{{ title }}</h3>
+          <div class="section has-text-left-mobile">
+            <p v-html="text"></p>
+          </div>
+          <iframe class="video" v-if="youtubeUrl" :src="youtubeUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </section>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>

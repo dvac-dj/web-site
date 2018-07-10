@@ -10,7 +10,7 @@
     </div>
     <div class="navbar-menu" :class="{ 'is-active': showMenu }">
       <div class="navbar-start" @click="linkClick">
-        <router-link class="navbar-item" to="/">HOME</router-link>
+        <router-link class="navbar-item" to="/next/">NEXT</router-link>
         <router-link class="navbar-item" to="/about/">ABOUT</router-link>
         <router-link class="navbar-item" to="/crew/">CREW</router-link>
         <router-link class="navbar-item" to="/access/">ACCESS</router-link>
@@ -44,6 +44,10 @@ export default {
   position: absolute;
   font-family: 'Oswald', sans-serif;
   width: 100%;
+}
+.navbar-item {
+  justify-content: center;
+  width: 80px;
 }
 .logo {
   width: 160px;

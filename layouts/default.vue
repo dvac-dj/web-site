@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper">
     <dvac-nav-bar />
-      <div class="main">
-        <nuxt />
-      </div>
+    <div class="main">
+      <nuxt />
+    </div>
     <dvac-footer />
   </div>
 </template>
@@ -67,7 +67,7 @@ body {
   }
 }
 .main {
-  min-height: calc(100vh - 150px);
+  min-height: calc(100vh - #{$footer-height});
   padding: 5rem 0;
 }
 </style>
