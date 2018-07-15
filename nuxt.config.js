@@ -34,16 +34,16 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'DVACとは、アニソンを中心に様々なジャンルを取り入れた雑食系パーティー。Crewそれぞれの持つバックグラウンドを生かし洋楽や邦楽を問わずクラブミュージックからPOPミュージックまでを組み込んだ多様な音楽とターンテーブルならではの音遊びを楽しんでください。' },
       { itemprop: 'name', content: 'DVAC -Digital Vinyl Anime Crew-' },
       { itemprop: 'description', content: 'DVACとは、アニソンを中心に様々なジャンルを取り入れた雑食系パーティー。Crewそれぞれの持つバックグラウンドを生かし洋楽や邦楽を問わずクラブミュージックからPOPミュージックまでを組み込んだ多様な音楽とターンテーブルならではの音遊びを楽しんでください。' },
-      { itemprop: 'itemprop', content: '' },
-      { property: 'og:url', content: '' },
+      { itemprop: 'itemprop', content: 'https://dvac.tokyo/ogp.png' },
+      { property: 'og:url', content: 'https://dvac.tokyo' },
       { property: 'og:type', content: 'website' },
       { property: 'og:title', content: 'DVAC -Digital Vinyl Anime Crew-' },
       { property: 'og:description', content: 'DVACとは、アニソンを中心に様々なジャンルを取り入れた雑食系パーティー。Crewそれぞれの持つバックグラウンドを生かし洋楽や邦楽を問わずクラブミュージックからPOPミュージックまでを組み込んだ多様な音楽とターンテーブルならではの音遊びを楽しんでください。' },
-      { property: 'og:image', content: '' },
+      { property: 'og:image', content: 'https://dvac.tokyo/ogp.png' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: 'DVAC -Digital Vinyl Anime Crew-' },
       { name: 'twitter:description', content: 'DVACとは、アニソンを中心に様々なジャンルを取り入れた雑食系パーティー。Crewそれぞれの持つバックグラウンドを生かし洋楽や邦楽を問わずクラブミュージックからPOPミュージックまでを組み込んだ多様な音楽とターンテーブルならではの音遊びを楽しんでください。' },
-      { name: 'twitter:image', content: '' }
+      { name: 'twitter:image', content: 'https://dvac.tokyo/summary_large_image.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
