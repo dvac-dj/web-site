@@ -28,14 +28,14 @@ body {
 
 <style lang="scss" scoped>
 .wrapper {
-  background: $background-color url('~/assets/illust.png') no-repeat right -300px top 100px;
+  background: $background-color url('~assets/illust.png') no-repeat right -300px top 100px;
   background-size: 573px;
 }
 @media
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 2dppx) {
   .wrapper {
-    background-image: url('~/assets/illust@2x.png');
+    background-image: url('~assets/illust@2x.png');
   }
 }
 @include mobile {

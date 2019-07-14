@@ -68,10 +68,13 @@ module.exports = {
     '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
     '@nuxtjs/font-awesome',
-    ['nuxt-sass-resources-loader', [
-      '~/assets/utilities.scss'
-    ]]
+    '@nuxtjs/style-resources'
   ],
+  styleResources: {
+    sass: [
+      '~/assets/utilities.scss'
+    ]
+  },
   /*
   ** Plugins
   */
